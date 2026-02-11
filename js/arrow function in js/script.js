@@ -26,3 +26,20 @@ const square = (x) => {
 }
 
 console.log(square(2));
+
+
+function ayush(){
+    console.log("hii i am ayush");
+}
+
+ayush();
+
+let a = function(){
+    console.log("hii i am ayush");
+}
+a();
+
+let b = () => {
+    console.log("hii i am ayush");
+}
+b();
