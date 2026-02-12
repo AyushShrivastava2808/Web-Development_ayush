@@ -1,0 +1,132 @@
+*{
+    margin : 0;
+    padding : 0;
+    /* The box-sizing CSS property sets how the total width and height of an element is calculated. */
+    box-sizing : border-box;
+}
+
+html{
+    background-color: #ffffff;
+    color: #555;
+    font-family: sans-serif;
+    font-size: 20px;
+    /* The text-rendering CSS property provides information to the rendering engine about what to optimize for when rendering text. */
+    /* to increase the speed of rendering */
+    text-rendering: optimizeLegibility;
+}
+
+.row{
+    max-width: 1140px;
+    /* margin upand down = 0 and left and right = auto */
+    margin: 0 auto;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('img/hero-image.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    /* CSS me transform ek tarah ka magic tool hai jo element ko move, rotate, scale ya skew karne ke kaam aata hai
+    */
+
+    /* -50% X‑axis (left/right) par → element ko uski apni width ka aadha left side me khiska deta hai.
+    -50% Y‑axis (up/down) par → element ko uski apni height ka aadha upar khiska deta hai
+    */
+
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link, 
+.btn-full:visited{
+    background-color: #e67e22;
+    color: #fff;
+    border: 1px solid #e67e22;
+    margin-right: 25px;
+}
+
+.btn-ghost:visited,
+.btn-ghost:link{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #cf6d17;
+    color: #e67e22
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
