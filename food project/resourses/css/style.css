@@ -1,7 +1,6 @@
 *{
     margin : 0;
     padding : 0;
-    /* The box-sizing CSS property sets how the total width and height of an element is calculated. */
     box-sizing : border-box;
 }
 
@@ -10,14 +9,11 @@ html{
     color: #555;
     font-family: sans-serif;
     font-size: 20px;
-    /* The text-rendering CSS property provides information to the rendering engine about what to optimize for when rendering text. */
-    /* to increase the speed of rendering */
     text-rendering: optimizeLegibility;
 }
 
 .row{
     max-width: 1140px;
-    /* margin upand down = 0 and left and right = auto */
     margin: 0 auto;
 }
 
@@ -26,6 +22,18 @@ header{
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
 }
 
 .hero-text-box{
@@ -33,25 +41,7 @@ header{
     width: 1140px;
     top: 50%;
     left: 50%;
-    /* CSS me transform ek tarah ka magic tool hai jo element ko move, rotate, scale ya skew karne ke kaam aata hai
-    */
-
-    /* -50% X‑axis (left/right) par → element ko uski apni width ka aadha left side me khiska deta hai.
-    -50% Y‑axis (up/down) par → element ko uski apni height ka aadha upar khiska deta hai
-    */
-
     transform: translate(-50%, -50%);
-}
-
-h1{
-    margin: 0 0 20px 0;
-    padding: 0;
-    color: #fff;
-    font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 4px;
 }
 
 .btn:link,
@@ -81,7 +71,7 @@ h1{
 .btn:hover,
 .btn:active{
     background-color: #cf6d17;
-    color: #e67e22
+    color: #e67e22;
 }
 
 .btn-ghost:hover,
@@ -117,10 +107,6 @@ h1{
 
 .main-nav li a:link,
 .main-nav li a:visited{
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.2s;
 }
@@ -130,28 +116,17 @@ h1{
     border-bottom: 2px solid #e67e22;
 }
 
-.span-4-of-4{
-    width: 100%;
-}
-
-.span-3-of-4{
-    width: 74.6%;
-}
-
-.span-2-of-4{
-    width: 49.2%;
-}
-
-.span-1-of-4{
-    width: 23.8%
-}
+.span-4-of-4{ width: 100%; }
+.span-3-of-4{ width: 74.6%; }
+.span-2-of-4{ width: 49.2%; }
+.span-1-of-4{ width: 23.8%; }
 
 section{
     padding: 80px 0;
 }
 
 h2{
-    font-weight: 300px;
+    font-weight: 300;
     text-transform: uppercase;
     font-size: 180%;
     word-spacing: 2px;
@@ -165,10 +140,9 @@ h2:after{
     background-color: #e67e22;
     content: " ";
     width: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
-    letter-spacing: 1px;
+    margin: 30px auto 0 auto;
 }
+
 .long-copy{
     line-height: 145%;
     width: 70%;
@@ -198,13 +172,35 @@ h3{
     margin-bottom: 10px;
 }
 
-meal-showcase{
+.section-features .row:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-steps .row:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-steps .step-box{
+    flex: 1;
+}
+
+.section-steps .step-box:first-child{
+    text-align: center;
+}
+
+.app-screen{
+    width: 50%;
+}
+
+.meals-showcase{
     list-style: none;
     width: 100%;
 }
 
 .meals-showcase li{
-    display: block;
     float: left;
     width: 25%;
 }
@@ -253,10 +249,6 @@ meal-showcase{
     margin-top: 70px;
 }
 
-.app-screen{
-    width: 20%;
-}
-
 .works-step div{
     color: #e67e22;
     border: 4px solid #e67e22;
@@ -271,16 +263,120 @@ meal-showcase{
     margin-right: 25px;
 }
 
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
 .btn-app img{
     height: 50px;
     width: auto;
     margin-right: 10px;
 }
 
-.works-step:last-of-type{
-    margin-bottom: 80px;
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
 }
 
 .section-works{
     background-color: #f4f4f4;
 }
+
+.col{
+    float: left;
+ }
+.row::after{
+    content:""; display:table; clear:both;
+}
+
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    line-height: 120%;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+}
+
+a:hover,
+a:active{
+    color:#555;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s color;
+}
+
+.section-testimonials .row {
+    display: flex;           
+    gap: 30px;               
+    justify-content: center;
+}
+
+.section-testimonials .col {
+    flex: 1;                 
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;      
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    color: #555;
+}
+
+cite {
+    display: flex;           
+    align-items: center;     
+    margin-top: 25px;
+    font-style: normal;      
+}
+
+cite img {
+    height: 50px;            
+    width: 50px;
+    border-radius: 50%;      
+    margin-right: 15px; 
+}
+
+.span-1-of-3{
+    width: 32%;
+}
+.span-2-of-3{
+    width: 66%;
+}
+.span-3-of-3{
+    width: 100%;
+}
+
